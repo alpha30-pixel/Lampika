@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lampika</title>
+<!-- استيراد خط جميل -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+<!-- استيراد Font Awesome للأيقونات -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+    overflow: hidden; /* يمنع أي سكرول */
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* الطبقة السوداء الشفافة */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(155, 63, 23, 0.5);
+    z-index: 1;
+}
+
+/* الصورة */
+.container {
+    position: fixed;
+    inset: 0;                 /* تاخد الشاشة كلها */
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:rgba(155, 63, 23, 0.5);
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+/* أيقونات الروابط في الأسفل */
+.social-links {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* المسافة بين الأيقونات */
+    z-index: 3;
+}
+
+.social-links a {
+    color: rgb(255, 255, 255); /* اللون الذهبي */
+    font-size: 32px; /* حجم الأيقونة */
+    transition: transform 0.2s, color 0.2s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    color: #FFD700; /* ذهب أفتح عند hover */
+}
+</style>
+</head>
+<body>
+
+
+
+<!-- الطبقة السوداء الشفافة -->
+<div class="overlay"></div>
+
+<!-- الصورة -->
+<div class="container">
+    <img src="image/1.jpg" alt="صورة">
+</div>
+
+<!-- أيقونات الروابط -->
+<div class="social-links">
+    <a href="https://www.facebook.com/share/v/1DdhcHw6bu/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/reel/DUVoCA5CJCd/?igsh=YnF0Z3VrODdmZWp3" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/201119595676" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://vt.tiktok.com/ZSm3T8UEh/" target="_blank"><i class="fab fa-tiktok"></i></a>
+</div>
+
+</body>
+</html>
